@@ -1,0 +1,74 @@
+# =========================
+# PYTHON
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# =========================
+# VIRTUAL ENVIRONMENTS
+# =========================
+venv/
+env/
+ENV/
+.venv/
+
+# =========================
+# ENVIRONMENT FILES (SECRETS)
+# =========================
+.env
+.env.local
+.env.production
+
+# =========================
+# FLASK
+# =========================
+instance/
+*.log
+flask_session/
+
+# =========================
+# DATABASE FILES
+# =========================
+*.db
+*.sqlite3
+
+# =========================
+# IDE / EDITOR FILES
+# =========================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# =========================
+# OS FILES
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# PYTHON PACKAGING
+# =========================
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# =========================
+# PYCHARM
+# =========================
+*.iml
+
+# =========================
+# NODE (if frontend accidentally inside)
+# =========================
+node_modules/
+package-lock.json
+
+# =========================
+# API KEYS / CONFIG
+# =========================
+config.py
+settings.py
+
