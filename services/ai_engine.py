@@ -256,6 +256,7 @@ from config import settings
 from mistralai import Mistral
 
 # Initialize Mistral client
+print("Loaded MISTRAL KEY =>", settings.MISTRAL_API_KEY)
 mistral_client = Mistral(api_key=settings.MISTRAL_API_KEY)
 
 class AIEngine:

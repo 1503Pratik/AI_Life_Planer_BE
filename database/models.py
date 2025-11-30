@@ -58,17 +58,34 @@
 from database.connection import db
 from datetime import datetime
 from bson import ObjectId
+from werkzeug.security import generate_password_hash
 
 # -----------------------------------
 # USER Document
 # -----------------------------------
-def create_user(name, email):
+# def create_user(name, email):
+#     user = {
+#         "name": name,
+#         "email": email,
+#         "created_at": datetime.utcnow()
+#     }
+#     return db.users.insert_one(user)
+
+
+def create_user(name, email, password):
     user = {
         "name": name,
         "email": email,
+        "password": generate_password_hash(password),  # 🔥 HASHED PASSWORD
         "created_at": datetime.utcnow()
     }
     return db.users.insert_one(user)
+
+def find_user_by_email(email):
+    return db.users.find_one({"email": email})
+
+def find_user_by_id(user_id):
+    return db.users.find_one({"_id": ObjectId(user_id)})
 
 # -----------------------------------
 # TASK Document

@@ -26,3 +26,6 @@ requests==2.31.0
 
 # BSON for ObjectId handling
 bson==0.5.10
+
+
+PyJWT==2.8.0
